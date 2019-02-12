@@ -1,0 +1,22 @@
+schema:
+  registry:
+    url: http://http://localhost:8080
+
+spring:
+
+  #External application.yml location that replaced defaults
+  config:
+    location: ./
+
+  #Connection to DB
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost/vts2
+    username: root
+    password: root
+  jpa:
+    properties:
+      hibernate:
+        temp:
+          use_jdbc_metadata_defaults: false
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
